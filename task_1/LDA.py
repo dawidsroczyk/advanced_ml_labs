@@ -4,7 +4,6 @@ from common import empirical_covariance
 
 class LDA(AmlClassifier):
 
-
     def __init__(self):
         self.W = None
         self.m0 = None
@@ -55,9 +54,13 @@ class LDA(AmlClassifier):
         class_fun_values = self.calculate_classification_value(X_test)
         result = class_fun_values > 0
         result = (~result).astype(int)
+        return result
     
 
     def predict_proba(self, X_test: np.array) -> np.array:
         class_fun_values = self.calculate_classification_value(X_test)
         proba = 1 / (np.exp(class_fun_values) + 1)
         return proba
+    
+    def get_params(self) -> list:
+        return [self.W, self.m0, self.m1, self.p0, self.p1]
