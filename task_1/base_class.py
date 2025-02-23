@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 import numpy as np
 
-class aml_classifier(ABC):
+class AMLClassifier(ABC):
 
     @abstractmethod
     def fit(X: np.array, y: np.array):
