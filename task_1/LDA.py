@@ -1,8 +1,8 @@
-from base_class import AmlClassifier
+from base_class import AMLClassifier
 import numpy as np
 from common import empirical_covariance
 
-class LDA(AmlClassifier):
+class BinaryLDA(AMLClassifier):
 
     def __init__(self):
         self.W = None
@@ -62,5 +62,6 @@ class LDA(AmlClassifier):
         proba = 1 / (np.exp(class_fun_values) + 1)
         return proba
     
+
     def get_params(self) -> list:
         return [self.W, self.m0, self.m1, self.p0, self.p1]
