@@ -2,7 +2,7 @@ from base_class import AMLClassifier
 import numpy as np
 from common import empirical_covariance
 
-class BinaryLDA(AMLClassifier):
+class LDA(AMLClassifier):
 
     def __init__(self):
         self.W = None

@@ -3,7 +3,7 @@ from common import empirical_covariance
 import numpy as np
 
 
-class BinaryQDA(AMLClassifier):
+class QDA(AMLClassifier):
 
     def __init__(self):
         self.S0 = None

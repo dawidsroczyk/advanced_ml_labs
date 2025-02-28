@@ -3,7 +3,7 @@ from common import naive_covariance
 import numpy as np
 
 
-class BinaryNB(AMLClassifier):
+class NB(AMLClassifier):
 
     def __init__(self):
         self.S0 = None
